@@ -55,7 +55,11 @@ module.exports = (robot) ->
     delete table[who]
     robot.brain.set PRIVILEGE_TABLE_KEY, table
 
-  robot.respond /privilege/i, (msg)->
-    table = robot.brain.get(PRIVILEGE_TABLE_KEY) || {}
-    msg.send JSON.stringify(table)
+  robot.respond /privilege(:?\s([^\s]*))?/i, (msg)->
+    action = msg.match[1]?.trim().toLowerCase()
+    if action == 'clear'
+      robot.brain.set PRIVILEGE_TABLE_KEY, {}
+    else
+      table = robot.brain.get(PRIVILEGE_TABLE_KEY) || {}
+      msg.send JSON.stringify(table)
 
