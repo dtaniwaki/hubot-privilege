@@ -12,13 +12,27 @@ Hubot is so smart! He can ignore you and your friends.
 
 ## Usage
 
+### Ignore a User
+
 * `hubot ignore foo`
 
 Hubot will not respond to messages from "foo" user.
 
+* `hubot ignore me`
+
+Hubot will not respond to messages from you.
+
+### Forgive a User
+
 * `hubot forgive foo`
 
 Hubot starts to respond to messages from "foo" user.
+
+* `hubot forgive me`
+
+Hubot starts to respond to messages from you.
+
+### Privilege Table
 
 * `hubot privilege`
 
