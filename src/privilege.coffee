@@ -15,13 +15,13 @@ module.exports = (robot) ->
   receiveOrg = robot.receive
   robot.receive = (msg)->
     username = msg.user?.name?.trim().toLowerCase()
-    action = msg.text?.match(/^hubot\s([^\s]*)/)?[1].trim().toLowerCase()
+    action = msg.text?.split(/\s/)[1]?.trim().toLowerCase()
     table = robot.brain.get(PRIVILEGE_TABLE_KEY) || {}
 
     ignore = true
-    if !username? || !table[username]?
+    if !username? || !table[username]? || !action?
       ignore = false
-    else if action? && /^(ignores?|forgives?|privilege)$/.test(action)
+    else if /^(help|ignores?|forgives?|privilege)$/.test(action)
       ignore = false
 
     if ignore
