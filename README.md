@@ -1,5 +1,7 @@
 # Hubot Privilege
 
+[![Build Status](https://travis-ci.org/dtaniwaki/hubot-privilege.svg)](https://travis-ci.org/dtaniwaki/hubot-privilege)
+
 Hubot is so smart! He can ignore you and your friends.
 
 ## Installation
