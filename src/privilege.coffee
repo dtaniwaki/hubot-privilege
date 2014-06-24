@@ -39,7 +39,7 @@ module.exports = (robot) ->
       who = msg.message.user?.name?.toLowerCase()
     s = "I will ignore #{who}"
     s += " about #{action}" if action?
-    console.log s
+    msg.reply s
     table = robot.brain.get(PRIVILEGE_TABLE_KEY) || {}
     table[who] = true
     robot.brain.set PRIVILEGE_TABLE_KEY, table
@@ -51,7 +51,7 @@ module.exports = (robot) ->
       who = msg.message.user?.name?.toLowerCase()
     s = "I will forgive #{who}"
     s += " about #{action}" if action?
-    console.log s
+    msg.reply s
     table = robot.brain.get(PRIVILEGE_TABLE_KEY) || {}
     delete table[who]
     robot.brain.set PRIVILEGE_TABLE_KEY, table
