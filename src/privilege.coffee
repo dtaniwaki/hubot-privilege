@@ -5,6 +5,7 @@
 #   hubot ignore(s) me/someone - Hubot will ignore me/someone
 #   hubot forgive(s) me/someone - Hubot will forgive me/someone
 #   hubot privilege - Check the privilege table
+#   hubot privilege clear - Clear the privilege table
 #
 # Author:
 #   dtaniwaki

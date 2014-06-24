@@ -38,6 +38,10 @@ Hubot starts to respond to messages from you.
 
 Hubot shows the privilege table.
 
+* `hubot privilege clear`
+
+Hubot clears the privilege table.
+
 ## TODO
 
 - Add group
