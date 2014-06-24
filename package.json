@@ -1,7 +1,7 @@
 {
   "name": "hubot-privilege",
   "description": "Hubot is so smart! He can ignore you and your friends.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "dtaniwaki",
   "license": "MIT",
   "keywords": [
